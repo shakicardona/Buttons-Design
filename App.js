@@ -25,32 +25,23 @@ export default function App() {
 
         <Text style={styles.title}>Buttons Design Best Practices</Text>
 
-        {/* First Button: 1. Visual Depth
+        {/* First Button: 1. Visual Depth */}
         <View style={styles.buttonContainer}>
           <Text>1. Visual Depth (Elevation & Shadows)</Text>
           <MyButton title="Press Me" onPress={pressButtonOne} type={1}/>
         </View>
-        */}
+        
 
-        {/* Second Button: 2. Press Feedback 
+        {/* Second Button: 2. Press Feedback  */}
         <View style={styles.buttonContainer}>
           <Text>2. Press Feedback (Interaction Response)</Text>
           <MyButton title="Press Me" onPress={pressButtonTwo} type={2}/>
         </View>
-        */}
 
         {/* Second Button: 3. Press Feedback */}
         <View style={styles.buttonContainer}>
           <Text>3. Gradient & Light Reflection (Material Feel)</Text>
           <MyButton title="Press Me" onPress={pressButtonThree} type={3}/>
-          {/*<MyButton title="Press Me" onPress={pressButtonOne} type={3}/>
-          <LinearGradient
-            colors={['#007BFF', '#0052D4']} // Blue gradient
-            style={styles.gradient}
-          >
-            <Text style={styles.text}>Press Me</Text>
-          </LinearGradient>
-          */}
         </View>
 
       </SafeAreaView>
@@ -78,17 +69,6 @@ const styles = StyleSheet.create({
     width: '90%',
     alignItems: 'center',
     paddingTop: 10,
-  },
-  background: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    height: 300,
-  },
-  gradient: {
-    paddingVertical: 14,
-    paddingHorizontal: 20,
-    alignItems: 'center',
+    margin: 6,
   },
 });

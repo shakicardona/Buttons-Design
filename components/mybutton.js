@@ -45,9 +45,9 @@ export default function MyButton({
                 >
                     <LinearGradient
                         colors={['#007BFF', '#0052D4']} // Blue gradient
-                        style={styles.gradient}
+                        style={styles.backgroundGradient}
                     >
-                        <Text style={styles.text}>Press Me</Text>
+                        <Text style={styles.buttonText}>Press Me</Text>
                     </LinearGradient>
                 </Pressable>
             );
@@ -62,31 +62,31 @@ const styles = StyleSheet.create({
     button: {
         width: 200,
         backgroundColor: '#007BFF',
-        padding: 15,
-        paddingTop: 10,
+        height: 40,
         borderRadius: 10,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.3,
         shadowRadius: 5,
         elevation: 6, // For Android
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     buttonText: {
         fontWeight: 'bold',
         color: '#fff'
     },
     buttonGeneric: {
-        padding: 15,
         borderRadius: 10,
+        height: 40,
         width: 200,
-        paddingTop: 10,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.3,
         shadowRadius: 5,
         elevation: 6, // For Android
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     buttonNoPressed: {
         backgroundColor: '#007BFF',
@@ -100,8 +100,14 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 }, // Smaller shadow when pressed
         shadowOpacity: 0.2,
     },
-    gradient: {
-        width: '100%',
+    backgroundGradient: {
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
         alignItems: 'center',
-    },
+        justifyContent: 'center',
+        borderRadius: 10,
+      },
 });
