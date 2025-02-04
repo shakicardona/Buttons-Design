@@ -18,6 +18,10 @@ export default function App() {
     Alert.alert('Third Button Pressed');
   }
 
+  function pressButtonFour() {
+    Alert.alert('Fourth Button Pressed');
+  }
+
   return (
     <SafeAreaProvider>
       <StatusBar hidden={true} />
@@ -31,17 +35,22 @@ export default function App() {
           <MyButton title="Press Me" onPress={pressButtonOne} type={1}/>
         </View>
         
-
         {/* Second Button: 2. Press Feedback  */}
         <View style={styles.buttonContainer}>
           <Text>2. Press Feedback (Interaction Response)</Text>
           <MyButton title="Press Me" onPress={pressButtonTwo} type={2}/>
         </View>
 
-        {/* Second Button: 3. Press Feedback */}
+        {/* Third Button: 3. Press Feedback */}
         <View style={styles.buttonContainer}>
           <Text>3. Gradient & Light Reflection (Material Feel)</Text>
           <MyButton title="Press Me" onPress={pressButtonThree} type={3}/>
+        </View>
+
+        {/* Fourth Button: 4. Rounded Corners */}
+        <View style={styles.buttonContainer}>
+          <Text>4. Rounded Corners (Soft & Touchable)</Text>
+          <MyButton title="Press Me" onPress={pressButtonFour} type={4}/>
         </View>
 
       </SafeAreaView>

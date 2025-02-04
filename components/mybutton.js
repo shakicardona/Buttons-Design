@@ -52,6 +52,26 @@ export default function MyButton({
                 </Pressable>
             );
 
+        case 4:
+
+            return (
+                <Pressable
+                    onPress={onPress}
+                    style={({ pressed }) => ([
+                        styles.buttonGeneric,
+                        {borderRadius: 50},
+                        pressed ? styles.buttonPressed : styles.buttonNoPressed
+                    ])}
+                >
+                    <LinearGradient
+                        colors={['#007BFF', '#0052D4']} // Blue gradient
+                        style={[styles.backgroundGradient, {borderRadius: 50}]}
+                    >
+                        <Text style={styles.buttonText}>Press Me</Text>
+                    </LinearGradient>
+                </Pressable>
+            );
+
         default:
             break;
     }
@@ -109,5 +129,5 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 10,
-      },
+    },
 });

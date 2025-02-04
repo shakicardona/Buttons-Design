@@ -68,10 +68,9 @@ In the real world, **physical buttons have depth and appear above their surface*
 In the real world, when we press a button, it physically moves down. If an app button doesn’t respond, it feels broken or unresponsive.
 
 ✅ **How to achieve it?**
-
-Make the button scale down slightly when pressed.
-Change its background color (darker when pressed).
-Reduce shadow size when pressed (like being pushed down).
+- Make the button scale down slightly when pressed.
+- Change its background color (darker when pressed).
+- Reduce shadow size when pressed (like being pushed down).
 
 ✅ **Example**
 ```tsx
@@ -93,15 +92,14 @@ Reduce shadow size when pressed (like being pushed down).
 
 ![Button 2](/assets/markdown/button2.gif)
 
-### 2. Gradient & Light Reflection (Material Feel)
+### 3. Gradient & Light Reflection (Material Feel)
 ✅ **Why is it important?**
 In real life, light affects surfaces. A button that has a flat color looks unnatural. Gradients and highlights make it feel more like a physical object.
 
 ✅ **How to achieve it?**
-
-Add a subtle gradient (lighter at the top, darker at the bottom).
-Add a thin highlight on the top border.
-Use glass-like reflections for a modern UI look.
+- Add a subtle gradient (lighter at the top, darker at the bottom).
+- Add a thin highlight on the top border.
+- Use glass-like reflections for a modern UI look.
 
 ✅ **Example**
 First install `Linear Gradient` library.
@@ -109,7 +107,7 @@ First install `Linear Gradient` library.
 npx expo install expo-linear-gradient
 ```
 ```tsx
-import LinearGradient from 'react-native-linear-gradient';
+import { LinearGradient } from 'expo-linear-gradient';
 
 <LinearGradient
   colors={['#007BFF', '#0052D4']} // Blue gradient
@@ -129,6 +127,30 @@ import LinearGradient from 'react-native-linear-gradient';
 ```
 👆 The gradient makes it look more dynamic and realistic.
 
+![Button 3](/assets/markdown/button3.gif)
+
+### 4. Rounded Corners (Soft & Touchable)
+✅ **Why is it important?**
+- Sharp edges feel rigid and uncomfortable.
+- Rounded buttons feel friendly, modern, and easier to touch.
+
+✅ **How to achieve it?**
+- Use borderRadius (at least 8-12px for rectangular buttons).
+- For fully circular buttons, set borderRadius to 50% of width/height.
+
+✅ **Example**
+
+```tsx
+<Pressable style={{
+  backgroundColor: '#28A745',
+  padding: 15,
+  borderRadius: 50, // Fully rounded
+}}>
+  <Text style={{ color: 'white', fontWeight: 'bold' }}>Rounded Button</Text>
+</Pressable>
+```
+👆 This feels much softer and inviting to press.
+![Button 4](/assets/markdown/button4.gif)
 
 ## 🎨 Final Thoughts
 
@@ -141,3 +163,4 @@ A good button **should not just look nice**—it should **feel right**. By combi
 [Expo Framework](https://docs.expo.dev/more/create-expo/#--template)
 [React Native Safe Area Context](https://docs.expo.dev/versions/latest/sdk/safe-area-context/)
 [Pressable](https://reactnative.dev/docs/pressable)
+[Linear Gradient](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)
